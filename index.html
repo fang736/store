@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Brawl Stars - Offres Spéciales</title>
+    <!-- Le fichier CSS sera lié ici dans la deuxième partie -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barre d'outils supérieure du Store -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-brawl">
+                <div class="logo-icon">💀</div>
+                <span>Brawl Store</span>
+            </div>
+            <div class="cart-trigger">
+                🛒 PANIER <span class="cart-badge" id="badge-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Zone Titre de l'image -->
+    <section class="hero-section">
+        <h1 class="hero-title">Offres Spéciales du Store</h1>
+        <p class="hero-subtitle">Ces offres exceptionnelles sont uniquement disponibles dans le Store Brawl Stars. Profitez-en !</p>
+    </section>
+
+    <!-- Disposition principale de la page -->
+    <main class="main-layout">
+        
+        <!-- Section Offre / Boîtier de produit -->
+        <section class="pack-container">
+            <div class="pack-bonus-header">
+                <span class="bonus-tag">Bonus du Store</span>
+                <span class="bonus-value">+1500 BLINGS ✨</span>
+            </div>
+            
+            <div class="pack-body">
+                <div class="pack-meta">
+                    <h2 class="pack-title">Pack Collector Ultime !</h2>
+                    <span class="promo-badge">-46%</span>
+                </div>
+
+                <!-- Aperçu visuel des personnages/skins -->
+                <div class="skins-preview">
+                    <div class="skin-card">
+                        <span class="skin-avatar">🧝‍♀️</span>
+                        <span class="skin-name">Malicieuse</span>
+                    </div>
+                    <div class="skin-card">
+                        <span class="skin-avatar">🤖</span>
+                        <span class="skin-name">Mecha Roi</span>
+                    </div>
+                    <div class="skin-card">
+                        <span class="skin-avatar">💂‍♂️</span>
+                        <span class="skin-name">Soldat</span>
+                    </div>
+                </div>
+
+                <div class="pack-price-row">
+                    <span class="price-label">Prix Spécial</span>
+                    <span class="price-value" id="base-pack-price">24.99 €</span>
+                </div>
+
+                <button class="btn-buy-pack" onclick="addPackToCart()">Ajouter au Panier</button>
+            </div>
+        </section>
+
+        <!-- Section Chariot / Panier d'achat -->
+        <aside class="sidebar-cart">
+            <h3 class="sidebar-title">Votre Chariot</h3>
+            
+            <div id="cart-content-area">
+                <p class="cart-empty-text">Aucun article dans le panier</p>
+            </div>
+
+            <!-- Bloc Code de réduction -->
+            <div class="promo-box">
+                <span class="promo-label">Code de créateur / Réduction</span>
+                <div class="promo-field-group">
+                    <input type="text" id="promo-input" class="promo-input" placeholder="Ex: XY2">
+                    <button class="btn-promo-apply" onclick="checkPromo()">Valider</button>
+                </div>
+                <div id="promo-status-msg" class="promo-status"></div>
+            </div>
+
+            <!-- Ticket de facturation -->
+            <div class="bill-box">
+                <div class="bill-row">
+                    <span>Sous-total</span>
+                    <span id="bill-subtotal">0.00 €</span>
+                </div>
+                <div class="bill-row" id="row-discount" style="display: none;">
+                    <span>Réduction Code</span>
+                    <span style="color: #4cd137;">-100%</span>
+                </div>
+                <div class="bill-row grand-total">
+                    <span>Total à payer</span>
+                    <span id="bill-total">0.00 €</span>
+                </div>
+            </div>
+
+            <button class="btn-checkout" onclick="processPayment()">Confirmer l'achat</button>
+        </aside>
+
+    </main>
+
+    <!-- Le fichier JavaScript sera lié ici dans la troisième partie -->
+    <script src="script.js"></script>
+</body>
+</html>
+
