@@ -1,0 +1,397 @@
+:root {
+    --brawl-purple: #8c3df5;
+    --brawl-dark-purple: #5c1cb8;
+    --brawl-yellow: #facc15;
+    --brawl-dark: #11141a;
+    --brawl-card: #1c1f26;
+    --brawl-red: #ff3838;
+    --text-light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+body {
+    background-color: var(--brawl-purple);
+    /* Dégradé radial violet vibrant inspiré du fond du store */
+    background-image: radial-gradient(circle at 50% 50%, var(--brawl-purple) 0%, var(--brawl-dark-purple) 100%);
+    color: var(--text-light);
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+/* Barre de navigation supérieure */
+header {
+    background-color: var(--brawl-dark);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #2d323f;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-brawl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--brawl-yellow);
+    -webkit-text-stroke: 1px #000;
+}
+
+.logo-icon {
+    background: var(--brawl-yellow);
+    color: black;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.cart-trigger {
+    background: #2d323f;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #41495a;
+    font-size: 14px;
+}
+
+.cart-badge {
+    background: var(--brawl-yellow);
+    color: black;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Zone Titre principal (Fidèle à l'image) */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #ffffff;
+    /* Effet d'ombrage de texte noir épais typique du jeu */
+    text-shadow: 3px 3px 0px #000, -3px -3px 0px #000, 3px -3px 0px #000, -3px 3px 0px #000;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    color: #e9d5ff;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Grille et disposition */
+.main-layout {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+}
+
+@media (max-width: 850px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Le Pack (Style bloc noir incliné) */
+.pack-container {
+    background: var(--brawl-dark);
+    border-radius: 16px;
+    border: 4px solid #000;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* En-tête Bonus */
+.pack-bonus-header {
+    background: #1e232d;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #000;
+}
+
+.bonus-tag {
+    background: #ff9f1c;
+    color: black;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 2px solid black;
+}
+
+.bonus-value {
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* Contenu du Pack */
+.pack-body {
+    padding: 25px;
+}
+
+.pack-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pack-title {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.promo-badge {
+    background: var(--brawl-red);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 18px;
+    transform: rotate(5deg);
+    border: 2px solid black;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* Aperçu des skins */
+.skins-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.skin-card {
+    background: linear-gradient(180deg, #3a4454 0%, #1c212b 100%);
+    border-radius: 8px;
+    padding: 15px 10px;
+    text-align: center;
+    border: 2px solid #4f5b73;
+}
+
+.skin-avatar {
+    font-size: 45px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.skin-name {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #cbd5e1;
+}
+
+.pack-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #181c24;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #2d323f;
+}
+
+.price-label {
+    font-size: 14px;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.price-value {
+    font-size: 26px;
+    color: var(--brawl-yellow);
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* Bouton Jaune Brawl Stars */
+.btn-buy-pack {
+    width: 100%;
+    background: linear-gradient(180deg, #ffcc00 0%, #ff9900 100%);
+    color: black;
+    border: 3px solid black;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 5px 0 #b36b00;
+    transition: transform 0.1s;
+}
+
+.btn-buy-pack:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #b36b00;
+}
+
+/* Panier d'achat latéral */
+.sidebar-cart {
+    background: var(--brawl-dark);
+    border-radius: 16px;
+    border: 4px solid #000;
+    padding: 20px;
+    align-self: start;
+}
+
+.sidebar-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #2d323f;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--brawl-yellow);
+}
+
+.cart-empty-text {
+    font-family: 'Arial', sans-serif;
+    color: #64748b;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Zone Code Promo */
+.promo-box {
+    background: #181c24;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 2px solid #2d323f;
+}
+
+.promo-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.promo-field-group {
+    display: flex;
+    gap: 8px;
+}
+
+.promo-input {
+    flex: 1;
+    background: #0b0d12;
+    border: 2px solid #41495a;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.promo-input:focus {
+    outline: none;
+    border-color: var(--brawl-yellow);
+}
+
+.btn-promo-apply {
+    background: white;
+    color: black;
+    border: 2px solid black;
+    padding: 0 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.promo-status {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    margin-top: 8px;
+    display: none;
+    font-weight: bold;
+}
+
+.promo-status.active {
+    display: block;
+    color: #4cd137;
+}
+
+/* Box Facture finale */
+.bill-box {
+    margin-top: 15px;
+    background: #181c24;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.bill-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+.bill-row.grand-total {
+    font-size: 22px;
+    color: white;
+    border-top: 2px solid #2d323f;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.free-price {
+    color: #4cd137 !important;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* Bouton Paiement Vert */
+.btn-checkout {
+    width: 100%;
+    background: linear-gradient(180deg, #4cd137 0%, #44bd32 100%);
+    color: white;
+    border: 3px solid black;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 5px 0 #2c7a20;
+  }
+
